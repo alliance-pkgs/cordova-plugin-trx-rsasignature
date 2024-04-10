@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-trx-rsasignature"
+  version="1.2.0">
+  <name>RSASignature</name>
+  <description>Cordova plugin to generate transaction rsa signature</description>
+  <license>MIT</license>
+  <keywords>cordova,plugin,android,rsasignature</keywords>
+  
+  <js-module src="www/RSASignature.js" name="RSASignature">
+    <clobbers target="RSASignature" />
+  </js-module>
+
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="RSASignature">
+        <param name="ios-package" value="RSASignature"/>
+      </feature>
+    </config-file>
+    <source-file src="src/ios/EllipticCurveKeyPair.swift" />
+    <source-file src="src/ios/SHA256.swift" />
+    <source-file src="src/ios/RSASignature.swift" />
+  </platform>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="RSASignature" >
+        <param name="android-package" value="com.cv.alliance.aop.trx.RSASignature"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/RSASignature.java" target-dir="src/com/cv/alliance/aop/trx" />
+    <source-file src="src/android/Transaction.java" target-dir="src/com/cv/alliance/aop/trx" />
+  </platform>
+
+</plugin>

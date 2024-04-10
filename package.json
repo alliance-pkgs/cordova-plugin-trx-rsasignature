@@ -1,0 +1,24 @@
+{
+  "name": "cordova-plugin-trx-rsasignature",
+  "version": "1.2.1",
+  "description": "Cordova plugin to generate transaction rsa signature",
+  "cordova": {
+    "id": "cordova-plugin-trx-rsasignature",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "android",
+    "rsasignature",
+    "ios"
+  ],
+  "author": "Lim Kok Chyuan",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "*"
+  }
+}
